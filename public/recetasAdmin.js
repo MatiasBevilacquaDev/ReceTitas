@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    validarSession()
     const rol = validarAdmin();
     fetch('/recetas-admin', {
         method: 'GET',

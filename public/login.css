@@ -1,0 +1,138 @@
+/* Estructura general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ff4d4d;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ffe6e6;
+}
+
+/* Sección de recetas */
+.recetas {
+    padding: 2rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.recetas h1 {
+    font-size: 2.2rem;
+    color: #ff4d4d;
+    margin-bottom: 1.5rem;
+}
+
+/* Contenedor de recetas */
+#recetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.receta {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.receta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.receta-id,
+.receta-name,
+.receta-ingredients,
+.receta-preparation {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.receta-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ff4d4d;
+}
+
+.recetas-actions {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.btn-anular {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-anular:hover {
+    background-color: #e63939;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.footer-social p {
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    color: #ff4d4d;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ffe6e6;
+}

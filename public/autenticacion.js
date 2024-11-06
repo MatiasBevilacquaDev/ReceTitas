@@ -11,7 +11,10 @@ function validarSession() {
 
 function validarAdmin() {
     const session = JSON.parse(window.sessionStorage.getItem("session"))
-    if ( session.id !== 8) {
-        window.location.href = "/login"
+    const id = session.id
+    if ( id == 8) {
+    }
+    else{
+    window.location.href = "/login.html"
     }
 }

@@ -1,0 +1,130 @@
+/* Estructura general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+}
+
+header {
+    background-color: #ff6f61;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.header-container h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: #333;
+}
+
+.cargar-receta {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+
+.cargar-receta h2 {
+    color: #ff6f61;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos del formulario */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e65a50;
+}
+
+#resultado {
+    text-align: center;
+    color: red;
+    margin-top: 1rem;
+}
+
+/* Footer */
+.footer-content {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.footer-social {
+    margin-top: 1rem;
+}
+
+.footer-social p {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #ff6f61;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}

@@ -1,28 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Receta - ReceTitas</title>
+    <link rel="stylesheet" href="carga.css">
 </head>
 <body>
+<header>
+    <div class="header-container">
+        <h1>ReceTitas</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="/recetas">Ver Recetas</a></li>
+                <li><a href="/recetas/nueva">Cargar Receta</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
+<main class="main-content">
+    <section class="cargar-receta">
+        <h2>Cargar Nueva Receta</h2>
+        <form id="recipeForm">
+            <div class="form-group">
+                <label for="name">Nombre de la receta:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredients">Ingredientes necesarios:</label>
+                <textarea id="ingredients" name="ingredients" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="preparation">Preparación:</label>
+                <textarea id="preparation" name="preparation" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Cargar receta</button>
+            <p id="resultado"></p>
+        </form>
+    </section>
+</main>
 
-<form id="recipeForm">
-    <label for="name">Nombre de la receta:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
-
-    <label for="ingredients">Ingredientes necesarios:</label><br>
-    <textarea id="ingredients" name="ingredients" required></textarea><br><br>
-
-    <label for="preparation">Preparacion:</label><br>
-    <textarea id="preparation" name="preparation" required></textarea><br><br>
-
-    <button type="submit">Cargar receta</button>
-</form>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 ReceTitas - Todos los derechos reservados</p>
+        <div class="footer-social">
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="/carga.js"></script>
 <script src="/autenticacion.js"></script>
-
-
 </body>
 </html>

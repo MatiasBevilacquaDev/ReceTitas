@@ -47,7 +47,11 @@ app.get('/recetas/admin', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'recetasAdmin.html'));
 });
 
-app.post('/register', (req, res) => {
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'register.html'));
+});
+
+app.post('/register-sv', (req, res) => {
     const {name, password} = req.body;
     const hashedPassword = bcrypt.hashSync(password, 8);
 
