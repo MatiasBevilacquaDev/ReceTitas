@@ -1,92 +1,82 @@
-/* Estructura general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    color: #333;
+    background: url('fondo.webp') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
-header {
+header nav {
     position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: #ff4d4d;
-    padding: 1rem;
-    text-align: right;
+    top: 10px;
+    right: 20px;
 }
 
 .menu {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    background-color: rgba(253, 161, 24, 0.7);
 }
 
-.menu li {
-    display: inline;
-    margin-right: 1rem;
-}
 
 .menu a {
-    color: #fff;
     text-decoration: none;
+    color: black;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
-.menu a:hover {
-    color: #ffe6e6;
-}
-
-/* Estilo del formulario */
-form {
-    background-color: #fff;
-    padding: 2rem;
+form#registerForm {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
     max-width: 400px;
-    width: 100%;
     text-align: center;
 }
 
-form h2 {
-    color: #ff4d4d;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+form#registerForm h2 {
+    color: rgba(253, 161, 24, 0.7);
+    margin-bottom: 20px;
 }
 
-form label {
+label {
     display: block;
-    color: #333;
-    margin-bottom: 0.5rem;
     font-weight: bold;
+    color: rgba(253, 161, 24, 0.7);
+    margin-top: 10px;
 }
 
-form input {
+input[type="text"],
+input[type="password"] {
     width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    margin-bottom: 1.2rem;
-    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid rgba(253, 161, 24, 0.7);
+    border-radius: 5px;
 }
 
-form button {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #ff4d4d;
-    color: #fff;
+button[type="submit"] {
+    background-color: rgba(253, 161, 24, 0.7);
+    color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    margin-top: 20px;
+    font-weight: bold;
+    width: 100%;
 }
 
-form button:hover {
-    background-color: #e63939;
+button[type="submit"]:hover {
+    background-color: rgba(253, 161, 24, 0.9);
 }

@@ -1,23 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('/recetasMostrar')
+document.addEventListener('DOMContentLoaded', () => {
+    const searchBar = document.getElementById('search-bar');
+    const recetasContainer = document.getElementById('recetas-container');
+
+    let recetas = [];
+
+    fetch('http://localhost:3000/recetasMostrar')
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
-                const recetasContainer = document.getElementById('recetas-container');
-                data.recetas.forEach(receta => {
-                    const recetaDiv = document.createElement('div');
-                    recetaDiv.classList.add('receta');
-                    recetaDiv.innerHTML = `
-                        <div class="Nombre">${receta.name}</div>
-                        <div class="Ingredientes">${receta.ingredients}</div>
-                        <div class="Preparacion">${receta.preparation}</div>                    `;
-                    recetasContainer.appendChild(recetaDiv);
-                });
-            } else {
-                console.error('Error al cargar las recetas:', data.message);
-            }
+            recetas = data.recetas;
+            displayRecetas(recetas);
         })
-        .catch(error => {
-            console.error('Error:', error);
+        .catch(error => console.error('Error fetching recetas:', error));
+
+    searchBar.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filteredRecetas = recetas.filter(receta => {
+            return (
+                receta.name.toLowerCase().includes(searchTerm) ||
+                receta.ingredients.toLowerCase().includes(searchTerm) ||
+                receta.preparation.toLowerCase().includes(searchTerm)
+            );
         });
+        displayRecetas(filteredRecetas);
+    });
+
+    function displayRecetas(recetas) {
+        recetasContainer.innerHTML = '';
+        recetas.forEach(receta => {
+            const recetaElement = document.createElement('div');
+            recetaElement.classList.add('receta');
+            recetaElement.innerHTML = `
+                <h2>${receta.name}</h2>
+                <p>Ingredientes: ${receta.ingredients}</p>
+                <p>Preparación: ${receta.preparation}</p>
+            `;
+            recetasContainer.appendChild(recetaElement);
+        });
+    }
 });

@@ -1,138 +1,72 @@
-/* Estructura general */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-}
-
-header {
-    background-color: #ff4d4d;
-    padding: 1rem;
-    color: #fff;
-    text-align: center;
-}
-
-.menu {
-    list-style: none;
-    padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    background: url('/fondo.webp') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
 }
 
-.menu a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-.menu a:hover {
-    color: #ffe6e6;
-}
-
-/* Sección de recetas */
-.recetas {
-    padding: 2rem;
-    flex-grow: 1;
-    text-align: center;
-}
-
-.recetas h1 {
-    font-size: 2.2rem;
-    color: #ff4d4d;
-    margin-bottom: 1.5rem;
-}
-
-/* Contenedor de recetas */
-#recetas-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-}
-
-.receta {
-    background-color: #fff;
-    border: 1px solid #ddd;
+.login-container {
+    background-color: #ffffff;
+    border: 1px solid rgba(253, 161, 24, 0.7);
     border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 300px;
-    text-align: left;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.receta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.receta-id,
-.receta-name,
-.receta-ingredients,
-.receta-preparation {
-    margin-bottom: 0.8rem;
-    font-size: 0.95rem;
-}
-
-.receta-name {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #ff4d4d;
-}
-
-.recetas-actions {
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 1rem;
 }
 
-.btn-anular {
-    background-color: #ff4d4d;
-    color: #fff;
-    padding: 0.6rem 1rem;
+#login-form h2 {
+    color: rgba(253, 161, 24, 0.7);
+    margin-bottom: 20px;
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(253, 161, 24, 0.7);
+    font-weight: bold;
+    text-align: left;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(253, 161, 24, 0.7);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.btn-anular:hover {
-    background-color: #e63939;
+.register-btn {
+    background-color: rgba(253, 161, 24, 0.7);
+    color: #ffffff;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1.5rem;
-    text-align: center;
+button[type="submit"] {
+    background-color: #ffffff;
+    color: rgba(253, 161, 24, 0.7);
+    border: 2px solid rgba(253, 161, 24, 0.7);
 }
 
-footer p {
-    margin: 0.5rem 0;
-}
-
-.footer-social p {
-    margin-top: 1rem;
-}
-
-.footer-social a {
-    color: #ff4d4d;
-    text-decoration: none;
-    margin: 0 0.5rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.footer-social a:hover {
-    color: #ffe6e6;
+button:hover {
+    opacity: 0.9;
 }
